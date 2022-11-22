@@ -9,7 +9,7 @@ import {IVaultFactory} from "../interfaces/IVaultFactory.sol";
 
 /**
  * @title Vault Implementation
- * @author Immunefi
+ * @author Buglapse
  * @notice Vaults are upgradeable. To not brick this, we use upgradeable libs and inherited storage
  */
 contract Vault is TokenHandler, VaultStorageV1 {
@@ -28,7 +28,7 @@ contract Vault is TokenHandler, VaultStorageV1 {
 
     event Withdraw(ERC20Payment[] withdrawal, uint256 nativeTokenAmt);
     event PayWhitehat(bytes32 indexed referenceId, address wh, ERC20Payment[] payout, uint256 nativeTokenAmt, address feeTo, uint256 fee);
-    event PausedOnImmunefi(bool isPaused);
+    event PausedOnBuglapse(bool isPaused);
 
     /**
      * @notice Initializes the vault (proxy) with a specified owner
@@ -120,8 +120,8 @@ contract Vault is TokenHandler, VaultStorageV1 {
      * @dev This value is only used in the frontend
      * @param isPaused The value to store in isPausedOnImmunefi
      */
-    function setIsPausedOnImmunefi(bool isPaused) public onlyOwner {
-        isPausedOnImmunefi = isPaused;
-        emit PausedOnImmunefi(isPaused);
+    function setIsPausedOnBuglapse(bool isPaused) public onlyOwner {
+        isPausedOnBuglapse = isPaused;
+        emit PausedOnBuglapse(isPaused);
     }
 }
