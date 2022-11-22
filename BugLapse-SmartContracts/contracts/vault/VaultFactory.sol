@@ -8,7 +8,7 @@ import {Address} from "@openzeppelin/contracts/utils/Address.sol";
 
 /**
  * @title Vault Factory
- * @author Immunefi
+ * @author Buglapse
  * @notice Vault factories deploy min beacon proxies and act as the beacon
  */
 contract VaultFactory is UpgradeableBeacon, IVaultFactory {
