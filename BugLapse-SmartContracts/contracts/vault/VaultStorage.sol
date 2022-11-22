@@ -6,10 +6,10 @@ import {IVaultFactory} from "../interfaces/IVaultFactory.sol";
 
 /**
  * @title Vault Storage
- * @author Immunefi
+ * @author Buglapse
  * @notice We use vault storage contracts to keep upgradeability
  */
 contract VaultStorageV1 is OwnableUpgradeable {
     IVaultFactory public vaultFactory;
-    bool public isPausedOnImmunefi;
+    bool public isPausedOnBuglapse;
 }
